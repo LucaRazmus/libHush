@@ -30,8 +30,6 @@ class BullshitAuth extends AbstractEventListener implements AuthenticationInterf
         $preEncode = "\x00{$username}_w\x00{$password}";
         $authString = XML::quote(base64_encode($preEncode));
 
-        \Kint::dump($preEncode, $authString);
-
         $this->getConnection()->send(
             '<auth xmlns="urn:ietf:params:xml:ns:xmpp-sasl" mechanism="PLAIN">' . $authString . '</auth>'
         );

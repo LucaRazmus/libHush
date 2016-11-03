@@ -30,10 +30,8 @@ class Hush
         $this->options = new Options();
 
         $this->options->setTimeout(5);
-        \Kint::dump($this->options->getAuthenticationClasses());
 
         $this->options->setAuthenticationClasses(['plain' => "\\" . BullshitAuth::class]);
-        \Kint::dump($this->options->getAuthenticationClasses());
     }
 
     public function generateWierdAssKey(){
