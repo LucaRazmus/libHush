@@ -196,7 +196,9 @@ class Hush
             ->setUsername($this->getUsername())
             ->setPassword($this->getPassword());
 
-        $this->options->setLogger($this->getLogger());
+        if($this->getLogger()) {
+            $this->options->setLogger($this->getLogger());
+        }
 
         $this->client = new Client($this->options);
 
