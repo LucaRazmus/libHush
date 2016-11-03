@@ -62,7 +62,7 @@ class Hush
     /**
      * @return string
      */
-    public function getAddress(): string
+    public function getAddress()
     {
         return $this->address;
     }
@@ -71,7 +71,7 @@ class Hush
      * @param string $address
      * @return Hush
      */
-    public function setAddress(string $address): Hush
+    public function setAddress($address)
     {
         $this->address = $address;
         return $this;
@@ -154,7 +154,7 @@ class Hush
     /**
      * @return Options
      */
-    public function getOptions(): Options
+    public function getOptions()
     {
         return $this->options;
     }
@@ -163,7 +163,7 @@ class Hush
      * @param Options $options
      * @return Hush
      */
-    public function setOptions(Options $options): Hush
+    public function setOptions(Options $options)
     {
         $this->options = $options;
         return $this;
@@ -172,7 +172,7 @@ class Hush
     /**
      * @return Client
      */
-    public function getClient(): Client
+    public function getClient()
     {
         return $this->client;
     }
@@ -181,7 +181,7 @@ class Hush
      * @param Client $client
      * @return Hush
      */
-    public function setClient(Client $client): Hush
+    public function setClient(Client $client)
     {
         $this->client = $client;
         return $this;
